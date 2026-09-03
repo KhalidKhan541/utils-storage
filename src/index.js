@@ -1,0 +1,1 @@
+﻿export class Storage{constructor(ns="default"){this.ns=ns;this.store=new Map()}get(k,d=null){return this.store.has(k)?this.store.get(k):d}set(k,v){this.store.set(k,v)}delete(k){return this.store.delete(k)}clear(){this.store.clear()}keys(){return[...this.store.keys()]}

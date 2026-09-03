@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((msg, s, resp) => { if(msg.action === 'get') { chrome.storage.local.get(msg.key, result => resp({value: result[msg.key] || msg.defaultValue})); return true; } if(msg.action === 'set') { chrome.storage.local.set({[msg.key]: msg.value}, () => resp({success: true})); return true; } });
